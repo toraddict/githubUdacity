@@ -23,8 +23,8 @@ def get_filters():
             #get user input for city (chicago, new york city, washington). 
             city = input("\nWhich city do you want to see the data for chicago, new york city, or washington:\n")
             city = city.lower()
-            
-            if(city == 'chicago' or city == 'new york city' or city == 'washington'):
+            inputcity = ['chicago' ,'new york city', 'washington']
+            if(city in inputcity):
               break
                   
             else:
@@ -50,9 +50,10 @@ def get_filters():
         if filter == 'month':
           month = input("\nwhich month do you want to filter by january, february, march, april, may, or june:\n")
           month = month.lower()
+            inputmonth = ['january' ,'february' ,'march' ,'april' , 'may' ,'june']
           day = 'all'
             
-          if(month ==  'january' or month == 'february' or month == 'march' or month == 'april' or month == 'may' or month == 'june'):
+          if(month in inputmonth):
             break
               
           else:
@@ -64,7 +65,8 @@ def get_filters():
           day = input("\nwhich day do you want to filter by monday, tuesday, wednesday, thursday, friday, saturday, or sunday:\n")
           day = day.lower()
           month = 'all'
-          if(day == 'monday' or day == 'tuesday' or day == 'wednesday' or day == 'thursday' or day == 'friday' or day == 'saturday' or day == 'sunday'):
+          inputday = ['monday' , 'tuesday' , 'wednesday' , 'thursday' , 'friday' , 'saturday' , 'sunday']
+          if(day in inputday):
             break
             
           else:
